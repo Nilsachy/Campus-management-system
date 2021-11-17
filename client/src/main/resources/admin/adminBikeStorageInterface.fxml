@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<HBox fx:id="adminBikeStorage" alignment="CENTER" prefHeight="620.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.cars.controllers.admin.AdminBikeStorageInterfaceController">
+   <children>
+      <Pane prefHeight="550.0" prefWidth="550.0">
+         <children>
+            <Text layoutX="4.0" layoutY="25.0" styleClass="title" text="Select faculty to add bikes to" />
+            <ListView fx:id="facultyListView" layoutY="50.0" prefHeight="340.0" prefWidth="550.0" />
+
+            <Text layoutX="1.0" layoutY="420.0" styleClass="blackText" text="Max bikes" />
+            <TextField fx:id="maxAvailable" layoutY="425.0" prefHeight="25.0" prefWidth="265.0" />
+            <Button fx:id="addStorageButton" layoutY="470.0" mnemonicParsing="false" onAction="#onAddBikeStorageClicked" prefHeight="80.0" prefWidth="550.0" styleClass="blueBorderButton" text="Add Bike Storage" />
+            <Label fx:id="feedbackAddMessage" layoutY="560.0"/>
+         </children>
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+      </Pane>
+      <Pane prefHeight="550.0" prefWidth="550.0">
+         <children>
+            <Text layoutY="25.0" styleClass="title" text="Select a bikes to remove" />
+            <ListView fx:id="bikeStorageListView" layoutY="100.0" prefHeight="350.0" prefWidth="550.0" />
+            <ChoiceBox fx:id="ordering" layoutY="50.0" prefHeight="27.0" prefWidth="550.0" value="Sort by capacity, ascending">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Sort by name, ascending" />
+                     <String fx:value="Sort by name, descending" />
+                     <String fx:value="Sort by capacity, ascending" />
+                     <String fx:value="Sort by capacity, descending" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Button fx:id="removeStorageButton" layoutY="470.0" mnemonicParsing="false" onAction="#onRemoveBikeStorageClicked" prefHeight="80.0" prefWidth="550.0" styleClass="redBorderButton" text="Remove Bike Storage" />
+            <Label fx:id="feedbackRemoveMessage" layoutY="560.0"/>
+         </children>
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+      </Pane>
+   </children>
+</HBox>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="accountPage" alignment="CENTER" prefHeight="620.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.cars.controllers.general.AccountInterfaceController">
+   <children>
+      <Pane fx:id="Left" prefHeight="640.0" prefWidth="550.0">
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+         <children>
+            <ListView fx:id="listView" layoutY="100.0" prefHeight="350.0" prefWidth="550.0" />
+            <Text layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Previous events" />
+            <Label fx:id="eventsErrorMessage" layoutY="478.0" textFill="RED" />
+            <Button layoutY="470.0" mnemonicParsing="false" onAction="#onRebookEventClicked" prefHeight="80.0" prefWidth="550.0" style="-fx-font-size: 17;" styleClass="blueBorderButton" text="Rebook event" />
+            <Button layoutX="524.0" layoutY="50.0" mnemonicParsing="false" onAction="#onAddEventClicked" styleClass="standardButton" text="+" />
+            <ChoiceBox fx:id="ordering" layoutY="50.0" prefHeight="27.0" prefWidth="514.0" value="Sort by title, ascending">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Sort by title, ascending" />
+                     <String fx:value="Sort by title, descending" />
+                     <String fx:value="Sort by most recent" />
+                     <String fx:value="Sort by least recent" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+      </Pane>
+      <Pane prefHeight="640.0" prefWidth="550.0">
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+         <children>
+            <Pane layoutY="120.0" prefHeight="449.0" prefWidth="550.0">
+               <children>
+                  <Text layoutX="38.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15" styleClass="blackText" text="Email" />
+                  <TextField fx:id="email" editable="false" layoutX="150.0" layoutY="26.0" prefHeight="27.0" prefWidth="250.0" text="admin@tudelft.nl" />
+                  <Text layoutX="38.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15" styleClass="blackText" text="Password" />
+                  <PasswordField fx:id="password" layoutX="151.0" layoutY="70.0" prefHeight="27.0" prefWidth="250.0" styleClass="password-field" />
+                  <Button layoutX="38.0" layoutY="117.0" mnemonicParsing="false" onAction="#onChangePasswordClicked" prefHeight="27.0" prefWidth="364.0" styleClass="standardButton" text="Change Password" />
+                  <Label fx:id="settingsErrorMessage" layoutX="38.0" layoutY="155.0" textFill="RED" />
+               </children>
+            </Pane>
+            <Button fx:id="signOut" layoutY="50.0" mnemonicParsing="false" onAction="#onSignOutClicked" prefHeight="80.0" prefWidth="550.0" styleClass="redBorderButton" text="SIGN OUT" />
+         </children>
+      </Pane>
+   </children>
+</HBox>

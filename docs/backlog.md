@@ -1,0 +1,68 @@
+ - log in screen
+	 - log in with only email and psd
+	 - with sign up option + page
+	 - require: email, password, (username/name), role
+	 - is role determined on server side
+	 - DB for user logins
+	 - T.O.S. (Lorem ipsum etc.)
+	 - OPT: stay logged in
+ - all screens
+	 - top left logo
+	 - redirect to own account (top right)
+	 - drop down with redirect to account page
+	 - OPT: log out button
+	 - breadcrumbs
+ - home screen entered after login
+	 - CLICK HERE TO… reserve room, bike or food
+	 - BUTTON to…. overview
+	 - OPT: loading screen
+	 - TODAY’S reservations, orders, rentals
+ - faculty selection screen
+	 - OPT: map
+	 - (drop down) list with picture appearing
+	 - after that a 'GO' button?
+	 - not selectable when building is closed??
+ - time slot selection
+	 - time slot first >> YES
+	 - table > 'x rooms available' in box
+	 - pop up for available rooms at that time
+	 - little map or list with available rooms >> start out with list
+	 - FILTER?
+		 - building >> have it in faculty selection
+		 - capacity
+		 - whiteboard
+	 - OPT: sort
+		 - capacity for example
+	 - show info of room
+	 - 'other times available' for specific room
+	 - limit of a year or 6 months in advance if you want
+ - room reservation
+	 - per faculty
+	 - OPT: max no rooms
+ - food reservation
+	 - list of all
+	 - can filter by department
+	 - each restaurant/cafe
+	 - which diets it accommodates
+	 - menu link?
+ - bike reservation
+	 - bikes are faculty bound
+	 - per faculty list bikes available
+	 - select faculty -> timetable for time slot selection
+	 - select where to pick up and drop off
+	 - employee only bikes
+	 - return where field
+	 - OPT: max no. bikes to rent
+ - account page
+	 - all current reservations - ordered by day
+	 - cancelling option
+	 - calendar view 
+	 - can switch between list and calendar? >> list for home page, calendar for account page
+	 - OPT: all previous reservations?
+	 - 10-15 reservations > 'reserve again' option
+	 - account settings
+	 - password reset > current password then new password
+ - system admin need GUI for simple actions
+	 - CRUD for opening times and reservations
+	 - not really necessary to have access to user info of other users
+ - we decide name

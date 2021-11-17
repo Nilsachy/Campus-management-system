@@ -1,0 +1,142 @@
+/* Breadcrumb buttons*/
+.breadcrumbButton {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 15;
+    -fx-cursor: hand;
+    -fx-min-width: 75px;
+}
+
+.breadcrumbButton:hover,.breadcrumbButton:focused {
+    -fx-background-color: transparent;
+    -fx-underline: true;
+}
+/* last breadcrumb shouldn't be clickable */
+.breadcrumbButton#lastCrumb, .breadcrumbButton#lastCrumb:hover {
+    -fx-background-color: white;
+    -fx-underline: false;
+    -fx-cursor: default;
+}
+
+.standardButton, .choice-box {
+    -fx-background-color: transparent;
+    -fx-border-color: black !important;
+    -fx-border-radius: 5px !important;
+    -fx-cursor: hand;
+}
+
+.standardButton:hover,.standardButton:focused,
+.choice-box:hover,.choice-box:focused{
+    -fx-background-color: transparent;
+}
+
+.mainButton {
+    -fx-background-color: rgba(0,0,0,.5);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.mainButton:hover {
+    -fx-background-color: rgba(0,0,0,.7);
+}
+
+.smallButton {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 3px;
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto", Arial, sans-serif;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.smallButton:hover, .smallButton:focused {
+    -fx-background-color: transparent;
+}
+
+/* colored buttons */
+.redButton {
+    -fx-background-color: #F58271;
+    -fx-padding: 6px;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-border-radius: 3px;
+    -fx-text-fill: white;
+    -fx-font-family: "Roboto", Arial, sans-serif;
+    -fx-cursor: hand;
+}
+
+.redButton:hover,.redButton:focused {
+    -fx-background-color: #F5A29A;
+}
+
+/* Border button*/
+.redBorderButton,
+.greenBorderButton,
+.blueBorderButton,
+.yellowBorderButton{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-text-fill: black;
+    -fx-font-size: 17;
+    -fx-font-family: "Roboto", Arial, sans-serif;
+    -fx-cursor: hand;
+}
+
+.redBorderButton {
+    -fx-border-color: #F58271;
+}
+
+.greenBorderButton {
+    -fx-border-color: #58F5AD;
+}
+
+.blueBorderButton {
+    -fx-border-color: #7B64F5;
+}
+
+.yellowBorderButton {
+    -fx-border-color: #f5f553;
+}
+
+.blueBorderButton:hover, .blueBorderButton:focused {
+    -fx-background-color: #C8C5F5;
+}
+
+.greenBorderButton:hover, .greenBorderButton:focused {
+    -fx-background-color: #8cf5bb;
+}
+
+.redBorderButton:hover, .redBorderButton:focused {
+    -fx-background-color: #F5A29A;
+}
+
+.yellowBorderButton:hover, .yellowBorderButton:focused{
+    -fx-background-color: #f5f175;
+}
+
+/* standard buttons */
+#goToAdminContainer .button {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto", Arial, sans-serif;
+    -fx-padding: 5px;
+    -fx-border-radius: 5;
+    -fx-border-color: black;
+    -fx-cursor: hand;
+}
+
+#goToAdminContainer:hover .button {
+    -fx-background-color: gainsboro;
+}

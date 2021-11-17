@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<HBox fx:id="adminBuilding" alignment="CENTER" prefHeight="620.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.cars.controllers.admin.AdminBuildingInterfaceController">
+   <children>
+      <Pane prefHeight="426.0" prefWidth="550.0">
+         <children>
+            <Text layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Add a building" />
+            <TextField fx:id="faculty"  layoutY="80.0" prefHeight="25.0" prefWidth="265.0" />
+            <Text layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackText" text="Faculty" />
+            <TextField fx:id="address" layoutX="285.0" layoutY="150.0" prefHeight="25.0" prefWidth="265.0" />
+            <Text layoutX="285.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackText" text="Address" />
+            <TextField fx:id="name" layoutX="285.0" layoutY="80.0" prefHeight="25.0" prefWidth="265.0" />
+            <Text layoutX="285.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackText" text="Name" />
+            <TextField fx:id="id" layoutY="150.0" prefHeight="25.0" prefWidth="265.0" />
+            <Text layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackText" text="Id" />
+            <Button fx:id="addBuildingButton" layoutY="250.0" minHeight="80.0" mnemonicParsing="false" onAction="#onAddBuildingClicked" prefWidth="550.0" styleClass="blueBorderButton" text="Add Building" />
+            <Label fx:id="feedbackAddMessage" layoutY="560.0"/>
+         </children>
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+      </Pane>
+      <Pane prefHeight="426.0" prefWidth="550.0">
+         <children>
+            <Text layoutY="25.0" styleClass="title" text="Select a building to remove" />
+            <ListView fx:id="listView" layoutY="100.0" prefHeight="340.0" prefWidth="550.0" />
+            <ChoiceBox fx:id="ordering" layoutY="50.0" prefHeight="27.0" prefWidth="550.0" value="Sort by number, ascending">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Sort by name, ascending" />
+                     <String fx:value="Sort by name, descending" />
+                     <String fx:value="Sort by number, ascending" />
+                     <String fx:value="Sort by number, descending" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Button  fx:id="removeBuildingButton" layoutY="470.0" onAction="#onRemoveBuildingClicked" prefHeight="80.0" prefWidth="550.0" styleClass="redBorderButton" text="Remove Building" />
+            <Label fx:id="feedbackRemoveMessage" layoutY="560.0"/>
+         </children>
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+      </Pane>
+   </children>
+</HBox>

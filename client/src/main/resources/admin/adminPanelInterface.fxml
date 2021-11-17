@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="adminPanel" alignment="CENTER" prefHeight="620.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.cars.controllers.admin.AdminPanelInterfaceController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="550.0">
+         <children>
+            <ListView styleClass="listStatic" fx:id="listView" layoutY="100.0" prefHeight="450.0" prefWidth="550.0" />
+            <Text layoutY="25.0" styleClass="title" text="Admin Home Panel" />
+            <ChoiceBox fx:id="ordering" layoutY="50.0" prefHeight="25.0" prefWidth="550.0" value="Sort by most recent">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Sort by title, ascending" />
+                     <String fx:value="Sort by title, descending" />
+                     <String fx:value="Sort by most recent" />
+                     <String fx:value="Sort by least recent" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+      </Pane>
+      <Pane prefHeight="600.0" prefWidth="550.0">
+         <children>
+            <Button fx:id="manipulateRoom" layoutY="50.0" mnemonicParsing="false" onAction="#onManipulateBuildingsClicked" prefHeight="80.0" prefWidth="550.0" styleClass="blueBorderButton" text="Manipulate buildings" />
+            <Button fx:id="manipulateBuildings" layoutY="190.0" mnemonicParsing="false" onAction="#onManipulateRoomsClicked" prefHeight="80.0" prefWidth="550.0" styleClass="redBorderButton" text="Manipulate rooms" />
+            <Button fx:id="manipulateBikes" layoutY="330.0" mnemonicParsing="false" onAction="#onManipulateBikeStoragesClicked" prefHeight="80.0" prefWidth="550.0" styleClass="greenBorderButton" text="Manipulate bike storage" />
+            <Button fx:id="manipulateAnnouncements" layoutY="470.0" mnemonicParsing="false" onAction="#onManipulateAnnouncementsClicked" prefHeight="80.0" prefWidth="550.0" styleClass="yellowBorderButton" text="Manipulate announcements" />
+         </children>
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+      </Pane>
+   </children>
+</HBox>

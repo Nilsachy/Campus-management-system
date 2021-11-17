@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="bikePage" alignment="CENTER" prefHeight="620.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.cars.controllers.reservations.RentABikeController">
+   <children>
+      <Pane fx:id="Left" prefHeight="640.0" prefWidth="550.0">
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+         <children>
+            <Text layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Depart Building" />
+            <Text layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallTitle" text="From" />
+            <Text layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+            <DatePicker fx:id="fromDate" layoutY="80.0" prefHeight="25.0" prefWidth="265.0" />
+            <Text layoutX="285.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:" />
+            <TextField fx:id="fromTime" layoutX="285.0" layoutY="80.0" prefHeight="25.0" prefWidth="265.0" />
+            <Text layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallTitle" text="To" />
+            <Text layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+            <DatePicker fx:id="toDate" layoutY="155.0" prefHeight="25.0" prefWidth="265.0" />
+            <Text layoutX="285.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:" />
+            <TextField fx:id="toTime" layoutX="285.0" layoutY="155.0" prefHeight="25.0" prefWidth="265.0" />
+            <Label fx:id="errorMessage" layoutX="24.0" layoutY="240.0" styleClass="errorMessage" />
+            <Button layoutY="200.0" mnemonicParsing="false" onAction="#onFindADepartBuildingClicked" prefHeight="40.0" prefWidth="550.0" styleClass="blueBorderButton" text="Find a depart building" />
+            <ListView fx:id="departListView" layoutY="270.0" prefHeight="280.0" prefWidth="550.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="Right" prefHeight="640.0" prefWidth="550.0">
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+         <children>
+            <Text layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Return Building" />
+            <ListView fx:id="returnListView" layoutY="50.0" prefHeight="400.0" prefWidth="550.0" />
+            <Button layoutY="470.0" mnemonicParsing="false" onAction="#onRentTheBikeClicked" prefHeight="80.0" prefWidth="550.0" styleClass="greenBorderButton" text="Rent a bike" />
+            </children>
+      </Pane>
+   </children>
+</HBox>

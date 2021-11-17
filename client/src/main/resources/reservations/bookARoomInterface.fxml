@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="roomPage" alignment="CENTER" prefHeight="620.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.cars.controllers.reservations.BookARoomController">
+   <children>
+      <Pane prefHeight="640.0" prefWidth="550.0">
+         <children>
+            <DatePicker fx:id="date" layoutY="75.0" prefHeight="25.0" prefWidth="260.0" />
+            <ChoiceBox fx:id="timeslot" layoutX="290.0" layoutY="75.0" prefHeight="25.0" prefWidth="260.0" value="09:00-11:00">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="09:00-11:00" />
+                     <String fx:value="11:00-13:00" />
+                     <String fx:value="13:00-15:00" />
+                     <String fx:value="15:00-17:00" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Text layoutX="289.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackText" text="Timeslot:" />
+            <Button layoutY="146.0" mnemonicParsing="false" onAction="#onGetAvailableRoomsClicked" prefHeight="27.0" prefWidth="260.0" styleClass="blueButton" text="Get Available Rooms" />
+            <ListView fx:id="listView" layoutY="200.0" prefHeight="350.0" prefWidth="550.0" />
+            <Text layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackText" text="Date:" />
+            <Label fx:id="buildingName" layoutY="3.0" styleClass="title" text="Label" />
+            <ChoiceBox fx:id="ordering" layoutX="290.0" layoutY="146.0" prefHeight="27.0" prefWidth="260.0" value="Sort by name, ascending">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Sort by name, ascending" />
+                     <String fx:value="Sort by name, descending" />
+                     <String fx:value="Sort by capacity, ascending" />
+                     <String fx:value="Sort by capacity, descending" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Label fx:id="errorMessage" layoutX="135.0" layoutY="185.0" textFill="RED" />
+         </children>
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+      </Pane>
+      <Pane prefHeight="638.0" prefWidth="550.0">
+         <children>
+            <Button layoutY="470.0" mnemonicParsing="false" onAction="#onBookRoomClicked" prefHeight="80.0" prefWidth="550.0" styleClass="blueBorderButton" text="Book this room" />
+            <ListView layoutY="50.0" prefHeight="400.0" prefWidth="550.0" styleClass="list-view" />
+            <Text layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Select a room:" />
+         </children>
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+      </Pane>
+   </children>
+</HBox>

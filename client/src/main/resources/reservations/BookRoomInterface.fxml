@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="buildingPage" alignment="CENTER" prefHeight="620.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.cars.controllers.reservations.BookRoomInterfaceController">
+   <children>
+      <Pane fx:id="Left" prefHeight="640.0" prefWidth="550.0">
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+         <children>
+            <Text layoutY="25.0" styleClass="title" text="Select a building:" />
+            <ListView fx:id="buildingsListView" layoutY="100.0" onMouseClicked="#onListViewClicked" prefHeight="450.0" prefWidth="550.0" />
+            <ChoiceBox fx:id="ordering" layoutY="50.0" prefHeight="25.0" prefWidth="550.0" value="Sort by name, ascending">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Sort by name, ascending" />
+                     <String fx:value="Sort by name, descending" />
+                     <String fx:value="Sort by number, ascending" />
+                     <String fx:value="Sort by number, descending" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+      </Pane>
+      <Pane fx:id="Right" prefHeight="640.0" prefWidth="550.0">
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+         <children>
+            <Label fx:id="buildingName" layoutY="20.0" styleClass="title" />
+            <HBox alignment="CENTER" layoutY="50.0" prefHeight="180.0" prefWidth="490.0" />
+            <Text layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackText" text="Opening times: " />
+            <Label layoutX="105.0" layoutY="307.0" text="08:00 - 20:00" />
+            <Label fx:id="buildingInfo" layoutY="362.0" text="Cool things to know about this building" />
+            <Button layoutY="470.0" mnemonicParsing="false" onAction="#onBookARoomInBuildingClicked" prefHeight="80.0" prefWidth="550.0" styleClass="blueBorderButton" text="Book a room at this building" />
+            <Label fx:id="errorMessage" layoutX="-2.0" layoutY="478.0" prefHeight="17.0" text="" textFill="RED" />
+         </children>
+      </Pane>
+   </children>
+</HBox>
